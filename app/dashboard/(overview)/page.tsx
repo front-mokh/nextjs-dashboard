@@ -10,7 +10,7 @@ import { LatestInvoicesSkeleton } from "@/app/ui/skeletons"
 export default async function Page() {
 
 
-    const latestInvoices = await fetchLatestInvoices();
+
 
     const { numberOfCustomers,
         numberOfInvoices,
@@ -38,7 +38,7 @@ export default async function Page() {
                 </Suspense>
                 <Suspense fallback={<LatestInvoicesSkeleton />}>
 
-                    <LatestInvoices latestInvoices={latestInvoices} />
+                    <LatestInvoices />
                 </Suspense>
             </div>
         </main>
